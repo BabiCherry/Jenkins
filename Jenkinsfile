@@ -1,21 +1,21 @@
-node {    
-    stage('Git clone') {
+node {
+    stage('git clone') { 
        git 'https://github.com/rahulshettyacademy/DevopsBasics.git'
     }
     stage('maven clean') {
        sh 'mvn clean'
     }
-    stage('maven validate') {
-       sh 'mvn validate'
+    stage('mvn validate') {
+       sh 'mvn validate' 
     }
-    stage('maven compile') {
+    stage('mvn compile') {
        sh 'mvn compile'
     }
-    stage('maven test') {
-       sh 'mvn test'
+    stage('mvn test') {
+       sh 'mvn test' 
     }
-    stage('maven package') {
-       sh 'mvn package'
+    stage('mvn package') {
+       sh 'mvn package' 
     }
 }
 
