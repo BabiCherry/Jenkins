@@ -1,6 +1,6 @@
 node {    
     stage('Git clone') {
-       git 'https://github.com/BabiCherry/dev-git.git'
+       git 'https://github.com/rahulshettyacademy/DevopsBasics.git'
     }
     stage('maven clean') {
        sh 'mvn clean'
