@@ -2,6 +2,16 @@ node {
     stage('git clone') { 
        git 'https://github.com/rahulshettyacademy/DevopsBasics.git'
     }
+    stage('upload war file to nexus'){
+       steps{
+         nexusArtifactUploader artifacts: [
+         [
+					
+	 artifactId: 'maven-project', 
+         classifier: '', 
+         file: 'target/maven-projec-1.0-SNAPSHOT.war', 
+         type: 'war'
+         ]
 	environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
